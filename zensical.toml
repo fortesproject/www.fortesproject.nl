@@ -1,0 +1,33 @@
+[project]
+site_url = "https://www.fortesproject.nl/"
+site_name = "FORTES"
+site_description = "FORTES – Framework for Open Research on Trade and Economic Sources"
+site_author = "FORTES Project"
+
+copyright = "Copyright &copy; 2026 FORTES – A TDCC-SSH Project"
+extra.generator = false
+
+extra_css = ["stylesheets/extra.css"]
+
+[project.theme]
+language = "en"
+favicon = "assets/favicon.svg"
+features = [
+  "navigation.top",
+]
+
+[project.theme.icon]
+logo = "lucide/table-2"
+
+[project.theme.font]
+text = "Inter"
+code = "JetBrains Mono"
+
+[project.theme.palette]
+scheme = "default"
+primary = "indigo"
+accent = "indigo"
+
+[project.markdown_extensions]
+attr_list = {}
+md_in_html = {}

@@ -1,0 +1,243 @@
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #0f172a;
+  --md-primary-fg-color--light: #334155;
+  --md-primary-fg-color--dark: #020617;
+  --md-accent-fg-color: #2563eb;
+  --md-accent-fg-color--transparent: rgba(37, 99, 235, 0.08);
+  --md-typeset-a-color: #2563eb;
+  --fortes-surface: #f8fafc;
+  --fortes-card-bg: #ffffff;
+  --fortes-card-border: #e2e8f0;
+  --fortes-card-hover-border: #94a3b8;
+  --fortes-muted: #475569;
+  --fortes-badge-bg: #f1f5f9;
+  --fortes-badge-fg: #1e293b;
+  --fortes-badge-border: #cbd5e1;
+}
+
+/* Hide the top header bar and sidebars for a clean single-page layout */
+.md-header,
+.md-sidebar {
+  display: none !important;
+}
+
+/* Narrow, comfortable reading width aligned across main content and footer */
+.md-grid {
+  max-width: 42rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.md-main__inner {
+  margin-top: 2.5rem;
+}
+
+.md-content__inner {
+  margin: 0 !important;
+  padding-top: 0.5rem;
+  padding-bottom: 3rem;
+}
+
+/* Typography refinements */
+.md-typeset {
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--fortes-card-border);
+}
+
+/* Sharp, minimal Hero section (no rounded corners) */
+.fortes-hero {
+  background-color: var(--fortes-surface);
+  border: 1px solid var(--fortes-card-border);
+  border-left: 3px solid var(--md-typeset-a-color);
+  border-radius: 0;
+  padding: 1.75rem 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.fortes-hero__eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--md-typeset-a-color);
+  margin-bottom: 0.35rem;
+}
+
+.fortes-hero__title {
+  font-size: clamp(1.75rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0 0 0.3rem 0 !important;
+  color: var(--md-typeset-color) !important;
+}
+
+.fortes-hero__subtitle {
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: var(--fortes-muted);
+  margin: 0;
+}
+
+/* Sharp Badges (no rounded corners) */
+.fortes-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.25rem 0 1.5rem 0;
+}
+
+.fortes-badge {
+  font-size: 0.73rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0;
+  background-color: var(--fortes-badge-bg);
+  color: var(--fortes-badge-fg);
+  border: 1px solid var(--fortes-badge-border);
+}
+
+/* Feature Grid & Sharp Cards */
+.fortes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin: 1.25rem 0;
+}
+
+@media (max-width: 600px) {
+  .fortes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fortes-card {
+  background-color: var(--fortes-card-bg);
+  border: 1px solid var(--fortes-card-border);
+  border-radius: 0;
+  padding: 1.1rem 1.2rem;
+  transition: border-color 0.15s ease;
+}
+
+.fortes-card:hover {
+  border-color: var(--fortes-card-hover-border);
+}
+
+.fortes-card__title {
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.35rem 0 !important;
+}
+
+.fortes-card__body {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--fortes-muted);
+}
+
+/* Project Members Grid (Sharp corners) */
+.fortes-members {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin: 1.25rem 0;
+}
+
+@media (max-width: 600px) {
+  .fortes-members {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fortes-member {
+  background-color: var(--fortes-card-bg);
+  border: 1px solid var(--fortes-card-border);
+  border-radius: 0;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  transition: border-color 0.15s ease;
+}
+
+.fortes-member:hover {
+  border-color: var(--fortes-card-hover-border);
+}
+
+.fortes-member__name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--md-typeset-color);
+  margin: 0 !important;
+}
+
+.fortes-member__dept {
+  font-size: 0.82rem;
+  color: var(--fortes-muted);
+  margin: 0;
+}
+
+/* Partners & Funder Logo Strip */
+.fortes-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.85rem;
+  margin: 1.25rem 0;
+}
+
+.fortes-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fortes-card-bg);
+  border: 1px solid var(--fortes-card-border);
+  border-radius: 0;
+  padding: 1rem 1.25rem;
+  text-decoration: none !important;
+  transition: border-color 0.15s ease;
+}
+
+.fortes-logo-item:hover {
+  border-color: var(--fortes-card-hover-border);
+}
+
+.fortes-logo-item img {
+  height: 2.75rem;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (forced-colors: active) {
+  .fortes-hero,
+  .fortes-card,
+  .fortes-member,
+  .fortes-badge,
+  .fortes-logo-item {
+    border: 2px solid CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+}

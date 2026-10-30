@@ -1,0 +1,12 @@
+[project]
+name = "www-fortesproject-nl"
+version = "0.1.0"
+description = "FORTES – Framework for Open Research on Trade and Economic Sources website"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "zensical>=0.0.73",
+]
